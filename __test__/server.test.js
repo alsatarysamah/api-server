@@ -1,5 +1,5 @@
 'use strict';
-const { app } = require('../src/server'); 
+const { app } = require('../src/server'); // destructing assignment 
 const supertest = require('supertest');
 const mockRequest = supertest(app);
 const { db } = require('../src/models/index');
@@ -23,7 +23,6 @@ describe('Web server', () => {
     it('adding a food', async () => {
         const response = await mockRequest.post('/food').send({
             name:"sushi",
-            description:"yemeee"
         });
         expect(response.status).toBe(201);
     });

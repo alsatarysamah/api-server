@@ -18,7 +18,7 @@ let newFood =req.body;
 console.log("new  "+newFood)
 console.log("model is  "+foodCollection);
 let newRecored=await foodCollection.create(newFood);
-res.status(200).json(newRecored);
+res.status(201).json(newRecored);
 // res.json(req.body)
 
 }
