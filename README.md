@@ -1,11 +1,11 @@
 # api-server
 [gitHub](https://github.com/alsatarysamah/api-server)
 
-[heroku]()
+[heroku](https://samah-api-server1.herokuapp.com/)
 
 [Action](https://github.com/alsatarysamah/api-server/actions)
 
-[pullRequest]()
+[pullRequest](https://github.com/alsatarysamah/api-server/pull/1)
 
 # SQL Models
 
