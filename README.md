@@ -5,7 +5,7 @@
 
 [Action](https://github.com/alsatarysamah/api-server/actions)
 
-[pullRequest](https://github.com/alsatarysamah/api-server/pull/1)
+[pullRequest](https://github.com/alsatarysamah/api-server/pull/2)
 
 ![](./UML.png)
 
