@@ -3,6 +3,7 @@ require('dotenv').config();
 const { Sequelize, DataTypes } = require("sequelize");
 const Collection = require('./lib/collection');
 const foodModel = require('../models/food');
+const clothesModel=require("../models/clothes")
 
 const POSTGRES_URI = process.env.NODE_ENV === 'test' ? 'sqlite:memory:' : process.env.DATABASE_URL;
 
@@ -15,18 +16,21 @@ let sequelizeOptions =
             dialect: 'postgres',
             protocol: 'postgres',
             dialectOptions: {
-                ssl: { require: true, rejectUnauthorized: false       },
+                ssl: { require: true, rejectUnauthorized: false },
                 native: true
             }
         } : {};
 //const customerTable = customerModel(sequelize, DataTypes);
         let sequelize = new Sequelize(POSTGRES_URI, sequelizeOptions);
         const foodTable = foodModel(sequelize, DataTypes);
-
         let foodCollection =new Collection(foodTable);
+
+        const clothesTable=clothesModel(sequelize, DataTypes);
+        const clothesCollection=new Collection(clothesTable);
       
         
         module.exports = {
             db: sequelize,
-            foodCollection: foodCollection
+            foodCollection: foodCollection,
+            clothesCollection:clothesCollection
         };
